@@ -5,4 +5,5 @@ RUN curl -L -H "Cache-Control: no-cache" -o /tmp/v.zip https://github.com/lytccc
     rm -rf /tmp/v.zip && \
     curl -L -H "Cache-Control: no-cache" -o /config.json https://raw.githubusercontent.com/lytccc/kthp/master/config.json && \
     curl -L -H "Cache-Control: no-cache" -o /entrypoint.sh https://raw.githubusercontent.com/lytccc/kthp/master/entrypoint.sh
+RUN chmod 755 /entrypoint.sh
 CMD ["/entrypoint.sh"]
